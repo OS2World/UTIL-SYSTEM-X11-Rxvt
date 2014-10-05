@@ -1,0 +1,15 @@
+                              === Rxvt BUGS ===
+
+Please send all bugs you have conceived and they are not listed here to 
+     rxvt-workers@babayaga.math.fu-berlin.de
+
+   O v e r v i e w 
+   ---------------
+
+  1) menubars (beta, in progress)
+
+
+1) menubars
+
+	Popup Menus should popup on top of EVERYTHING else rather than be
+	obscured by overlapping windows

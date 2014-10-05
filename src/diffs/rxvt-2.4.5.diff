@@ -1,0 +1,1002 @@
+diff -c -r -N rxvt-2.4.5.orig/config.h rxvt-2.4.5/config.h
+*** rxvt-2.4.5.orig/config.h	Thu Jan  1 00:00:00 1970
+--- rxvt-2.4.5/config.h	Sat May 16 15:26:50 1998
+***************
+*** 0 ****
+--- 1,174 ----
++ /* config.h.  Generated automatically by configure.  */
++ /* autoconf/config.h.in.  Generated automatically from autoconf/configure.in by autoheader.  */
++ 
++ /* Define if on AIX 3.
++    System headers sometimes define this.
++    We just want to avoid a redefinition error message.  */
++ #ifndef _ALL_SOURCE
++ /* #undef _ALL_SOURCE */
++ #endif
++ 
++ /* Define to empty if the keyword does not work.  */
++ /* #undef const */
++ 
++ /* Define to `int' if <sys/types.h> doesn't define.  */
++ /* #undef gid_t */
++ 
++ /* Define if you have <sys/wait.h> that is POSIX.1 compatible.  */
++ #define HAVE_SYS_WAIT_H 1
++ 
++ /* Define as __inline if that's what the C compiler calls it.  */
++ /* #undef inline */
++ 
++ /* Define to `int' if <sys/types.h> doesn't define.  */
++ /* #undef mode_t */
++ 
++ /* Define to `int' if <sys/types.h> doesn't define.  */
++ /* #undef pid_t */
++ 
++ /* Define if you need to in order for stat and other things to work.  */
++ /* #undef _POSIX_SOURCE */
++ 
++ /* Define as the return type of signal handlers (int or void).  */
++ #define RETSIGTYPE void
++ 
++ /* Define if you have the ANSI C header files.  */
++ #define STDC_HEADERS 1
++ 
++ /* Define if you can safely include both <sys/time.h> and <time.h>.  */
++ #define TIME_WITH_SYS_TIME 1
++ 
++ /* Define to `int' if <sys/types.h> doesn't define.  */
++ /* #undef uid_t */
++ 
++ /* Define if the X Window System is missing or not being used.  */
++ /* #undef X_DISPLAY_MISSING */
++ 
++ /* ------------------------------------------------------------------------- */
++ /* Set TERMINFO value to the value given by configure */
++ /* #undef RXVT_TERMINFO */
++ 
++ /* Set TERM to the value given by configure */
++ /* #undef TERMENV */
++ 
++ /* Define if you want KANJI support */
++ /* after compilation, rename executable as `kxvt' */
++ /* #undef KANJI */
++ 
++ /* Define if you want BIG5 support */
++ /* after compilation, rename executable as `crxvt' */
++ /* #define BIG5 1 */
++ 
++ /* Define if you want XCIN Chinese Input support */
++ /* #define XCIN 1 */
++ 
++ /* Define if Xlocale support doesn't work */
++ #define NO_XLOCALE 1
++ 
++ /* Define if you want Menubar support */
++ /* #define MENUBAR */
++ 
++ /* Define if you want Rob Nation's own graphic mode */
++ /* #undef RXVT_GRAPHICS */
++ 
++ /* Define if you want to revert to Xterm style scrollbars */
++ /* #undef XTERM_SCROLLBAR */
++ 
++ /* Define if you want support for Greek Elot-928 & IBM-437 keyboard */
++ /* see doc/README.greek */
++ /* #undef GREEK_SUPPORT */
++ 
++ /* Define if you want tty's to be setgid() to the `tty' group */
++ /* #undef TTY_GID_SUPPORT */
++ 
++ /* Define if you want to have utmp/utmpx support */
++ #undef UTMP_SUPPORT
++ 
++ /* Define if you want to have wtmp support when utmp/utmpx is enabled */
++ #undef WTMP_SUPPORT
++ 
++ /* Define if you want to have sexy-looking background pixmaps. Needs libXpm */
++ #define XPM_BACKGROUND
++ 
++ /* Define if you include <X11/xpm.h> on a normal include path (be careful) */
++ #define XPM_INC_X11
++ /* ------------------------------------------------------------------------- */
++ /* Define if struct utmp/utmpx contains ut_host */
++ /* #define HAVE_UTMP_HOST 1 */
++ 
++ /* Define location of utmp/utmpx */
++ /* #define RXVT_UTMP_FILE "/var/run/utmp" */
++ 
++ /* Define location of wtmp */
++ /* #define RXVT_WTMP_FILE "/var/log/wtmp" */
++ 
++ /* Define location of ttys/ttytab */
++ /* #define TTYTAB_FILENAME "/etc/ttys" */
++ 
++ /* Define if you need function prototypes */
++ #define PROTOTYPES 1
++ 
++ /* The number of bytes in a int.  */
++ #define SIZEOF_INT 4
++ 
++ /* Define if you have the atexit function.  */
++ #define HAVE_ATEXIT 1
++ 
++ /* Define if you have the seteuid function.  */
++ /* #define HAVE_SETEUID 1 */
++ 
++ /* Define if you have the setutent function.  */
++ /* #undef HAVE_SETUTENT */
++ 
++ /* Define if you have the unsetenv function.  */
++ /* #define HAVE_UNSETENV 1 */
++ 
++ /* Define if you have the <assert.h> header file.  */
++ #define HAVE_ASSERT_H 1
++ 
++ /* Define if you have the <fcntl.h> header file.  */
++ #define HAVE_FCNTL_H 1
++ 
++ /* Define if you have the <grp.h> header file.  */
++ /* #define HAVE_GRP_H 1 */
++ 
++ /* Define if you have the <lastlog.h> header file.  */
++ /* #undef HAVE_LASTLOG_H */
++ 
++ /* Define if you have the <libc.h> header file.  */
++ /* #undef HAVE_LIBC_H */
++ 
++ /* Define if you have the <stdarg.h> header file.  */
++ #define HAVE_STDARG_H 1
++ 
++ /* Define if you have the <stdlib.h> header file.  */
++ #define HAVE_STDLIB_H 1
++ 
++ /* Define if you have the <string.h> header file.  */
++ #define HAVE_STRING_H 1
++ 
++ /* Define if you have the <sys/byteorder.h> header file.  */
++ /* #undef HAVE_SYS_BYTEORDER_H */
++ 
++ /* Define if you have the <sys/ioctl.h> header file.  */
++ #define HAVE_SYS_IOCTL_H 1
++ 
++ /* Define if you have the <sys/select.h> header file.  */
++ #define HAVE_SYS_SELECT_H 1
++ 
++ /* Define if you have the <sys/sockio.h> header file.  */
++ #define HAVE_SYS_SOCKIO_H 1
++ 
++ /* Define if you have the <sys/time.h> header file.  */
++ #define HAVE_SYS_TIME_H 1
++ 
++ /* Define if you have the <termios.h> header file.  */
++ #define HAVE_TERMIOS_H 1
++ 
++ /* Define if you have the <unistd.h> header file.  */
++ #define HAVE_UNISTD_H 1
++ 
++ /* Define if you have the <utmpx.h> header file.  */
++ /* #undef HAVE_UTMPX_H */
++ 
++ #define HAVE_SYS_TYPES_H 1
+diff -c -r -N rxvt-2.4.5.orig/src/command.c rxvt-2.4.5/src/command.c
+*** rxvt-2.4.5.orig/src/command.c	Fri Jan  2 03:29:08 1998
+--- rxvt-2.4.5/src/command.c	Sat May 16 15:27:26 1998
+***************
+*** 28,37 ****
+--- 28,55 ----
+   *    Raul Garcia Garcia <rgg@tid.es>
+   *    Oezguer Kesim <kesim@math.fu-berlin.de>
+   *----------------------------------------------------------------------*/
++ /*
++    add support for os2, by Hung-Chi Chu <hcchu@r350.ee.ntu.edu.tw>
++    (codes are borrowed from xterm/os2main.c)
++  */
+  
+  /*{{{ includes: */
+  #include "rxvt.h"		/* NECESSARY */
+  
++ #ifdef __EMX__
++ #define INCL_DOSFILEMGR
++ #define INCL_DOSDEVIOCTL
++ #define INCL_DOSSEMAPHORES
++ #include <os2.h>
++ #ifndef CEOL
++ #define CEOL 0
++ #endif
++ #define NO_SETSID
++ #define lstat stat
++ #define chown(x,y,z)
++ #include <sys/termio.h>
++ #endif
++ 
+  #ifdef OFFIX_DND
+  #include <X11/Xatom.h>
+  #define DndFile	2
+***************
+*** 301,306 ****
+--- 319,440 ----
+  /*----------------------------------------------------------------------*/
+  /*}}} */
+  
++ #ifdef __EMX__
++ /* borrowed from xterm/os2 */
++ 
++ #define XFREE86_PTY	0x76
++ 
++ #define XTY_TIOCSETA	0x48
++ #define XTY_TIOCSETAW	0x49
++ #define XTY_TIOCSETAF	0x4a
++ #define XTY_TIOCCONS	0x4d
++ #define XTY_TIOCSWINSZ	0x53
++ #define XTY_ENADUP	0x5a
++ #define XTY_TRACE	0x5b
++ #define XTY_TIOCGETA	0x65
++ #define XTY_TIOCGWINSZ	0x66
++ #define PTMS_GETPTY	0x64
++ #ifndef NCCS
++ #define NCCS 11
++ #endif
++ 
++ #define TIOCCONS	108
++ #define TIOCSWINSZ	113
++ #define TIOCGWINSZ	117
++ 
++ struct pt_termios
++ {
++         unsigned short  c_iflag;
++         unsigned short  c_oflag;
++         unsigned short  c_cflag;
++         unsigned short  c_lflag;
++         unsigned char   c_cc[NCCS];
++         long            _reserved_[4];
++ };
++ 
++ struct winsize {
++         unsigned short  ws_row;         /* rows, in characters */
++         unsigned short  ws_col;         /* columns, in characters */
++         unsigned short  ws_xpixel;      /* horizontal size, pixels */
++         unsigned short  ws_ypixel;      /* vertical size, pixels */
++ };
++ 
++ int ptioctl(int fd, int func, void* data)
++ {
++ 	APIRET rc;
++ 	ULONG  len;
++ 	struct pt_termios pt;
++ 	struct termio *t;
++ 	int i;
++ 
++ 	switch (func) {
++ 	case TCGETA:
++ 		rc = DosDevIOCtl(fd,XFREE86_PTY, func,
++ 		NULL, 0, NULL,
++ 		(ULONG*)&pt, sizeof(struct pt_termios), &len);
++ 		if (rc) return -1;
++ 		t = (struct termio*)data;
++ 		t->c_iflag = pt.c_iflag;
++ 		t->c_oflag = pt.c_oflag;
++ 		t->c_cflag = pt.c_cflag;
++ 		t->c_lflag = pt.c_lflag;		
++ 		for (i=0; i<NCC; i++)
++ 			t->c_cc[i] = pt.c_cc[i];
++ 		return 0;
++ 	case TCSETA:
++ 	case TCSETAW:
++ 	case TCSETAF:
++ 		t = (struct termio*)data;
++ 		pt.c_iflag = t->c_iflag;
++ 		pt.c_oflag = t->c_oflag;
++ 		pt.c_cflag = t->c_cflag;
++ 		pt.c_lflag = t->c_lflag;
++ 
++ 		for (i=0; i<NCC; i++)
++ 			pt.c_cc[i] = t->c_cc[i];
++ 		if (func==TCSETA) 
++ 			i = XTY_TIOCSETA;
++ 		else if (func==TCSETAW) 
++ 			i = XTY_TIOCSETAW;
++ 		else
++ 			i = XTY_TIOCSETAF;
++ 		rc = DosDevIOCtl(fd,XFREE86_PTY, i,
++ 			(ULONG*)&pt, sizeof(struct pt_termios), &len,
++ 			NULL, 0, NULL);
++ 		return (rc) ? -1 : 0;
++ 	case TIOCCONS:
++ 		return DosDevIOCtl(fd,XFREE86_PTY, XTY_TIOCCONS,
++ 			(ULONG*)data, sizeof(ULONG), &len,
++ 			NULL, 0, NULL);
++ 	case TIOCSWINSZ:				
++ 		return DosDevIOCtl(fd,XFREE86_PTY, XTY_TIOCSWINSZ,
++ 			(ULONG*)data, sizeof(struct winsize), &len,
++ 			NULL, 0, NULL);
++ 	case TIOCGWINSZ:
++ 		return DosDevIOCtl(fd,XFREE86_PTY, XTY_TIOCGWINSZ,
++ 			NULL, 0, NULL,
++ 			(ULONG*)data, sizeof(struct winsize), &len);
++ 	case XTY_ENADUP:
++ 		i = 1;
++ 		return DosDevIOCtl(fd,XFREE86_PTY, XTY_ENADUP,
++ 			(ULONG*)&i, sizeof(ULONG), &len,
++ 			NULL, 0, NULL);
++ 	case XTY_TRACE:
++ 		i = 2;
++ 		return DosDevIOCtl(fd,XFREE86_PTY, XTY_TRACE,
++ 			(ULONG*)&i, sizeof(ULONG), &len,
++ 			NULL, 0, NULL);
++ 	case PTMS_GETPTY:
++ 		i = 1;
++ 		return DosDevIOCtl(fd,XFREE86_PTY, PTMS_GETPTY,
++ 			(ULONG*)&i, sizeof(ULONG), &len,
++ 			(UCHAR*)data, 14, &len);
++ 	default:
++ 		return -1;
++ 	}
++ }
++ #endif
++ 
+  /*{{{ substitute system functions */
+  #ifndef _POSIX_VERSION
+  #if defined (__svr4__)
+***************
+*** 314,319 ****
+--- 448,465 ----
+      return rlim.rlim_cur;
+  }
+  #endif
++ #else
++ #ifdef __EMX__
++ int
++ getdtablesize(void)
++ {
++     long req_count=0, handle_count;
++     if (DosSetRelMaxFH(&req_count, &handle_count) == 0)
++ 	return (int)handle_count;
++     else
++ 	return 255;
++ }
++ #endif
+  #endif
+  /*}}} */
+  
+***************
+*** 322,327 ****
+--- 468,474 ----
+  void
+  privileges(int mode)
+  {
++ #ifndef __EMX__
+  #ifdef HAVE_SETEUID
+      static uid_t    euid;
+      static gid_t    egid;
+***************
+*** 359,364 ****
+--- 506,512 ----
+  	break;
+      }
+  #endif
++ #endif
+  }
+  /*}}} */
+  
+***************
+*** 496,501 ****
+--- 644,650 ----
+     }
+     goto Failed;   
+  #else
++ #ifndef __EMX__
+      static char     pty_name[] = "/dev/pty??";
+      static char     tty_name[] = "/dev/tty??";
+      int             len = strlen(tty_name);
+***************
+*** 518,523 ****
+--- 667,696 ----
+  	}
+      }
+      goto Failed;
++ #else	/* __EMX__ */
++ #define PTMS_BUFSZ 14
++     static char ptynam[PTMS_BUFSZ];
++     static char ttynam[PTMS_BUFSZ];
++     char namebuf[PTMS_BUFSZ];
++     int mode;
++ 
++     /* ask the PTY manager */
++     fd = open("/dev/ptms$",0);
++     if (fd && ptioctl(fd,PTMS_GETPTY,namebuf)==0) {
++       strcpy(ttynam,namebuf);
++       strcpy(ptynam,namebuf);
++       ttynam[5] = 't';
++       close (fd);
++       if ((fd = open(ptynam, O_RDWR)) < 0)
++         goto Failed;
++     } else goto Failed;
++     mode = fcntl(fd, F_GETFL, 0);
++     mode |= O_NDELAY;
++     fcntl(fd,F_SETFL,mode);
++     ptydev = ptynam;
++     ttydev = ttynam;
++     return fd;
++ #endif
+  #endif
+  
+    Found:
+***************
+*** 546,551 ****
+--- 719,725 ----
+   * setsid() [or setpgrp] must be before open of the terminal,
+   * otherwise there is no controlling terminal (Solaris 2.4, HP-UX 9)
+   */
++ #ifndef __EMX__
+  #ifndef ultrix
+  #ifdef NO_SETSID
+      pid = setpgrp(0, 0);
+***************
+*** 558,568 ****
+--- 732,744 ----
+      print_error("(%s: line %d): PID = %d\n", __FILE__, __LINE__, pid);
+  #endif
+  #endif				/* ultrix */
++ #endif	/* __EMX__ */
+  
+      if ((fd = open(ttydev, O_RDWR)) < 0) {
+  	print_error("can't open slave tty %s", ttydev);
+  	exit(EXIT_FAILURE);
+      }
++ #ifndef __EMX__
+  #if defined (__svr4__)
+  /*
+   * Push STREAMS modules:
+***************
+*** 597,602 ****
+--- 773,782 ----
+  	privileges(IGNORE);
+      }
+  #endif				/* __svr4__ */
++ #else
++     ptioctl(fd, XTY_ENADUP, 0);
++     chmod(ttydev, 0622);
++ #endif	/* __EMX__ */
+  
+  /*
+   * Close all file descriptors.  If only stdin/out/err are closed,
+***************
+*** 618,623 ****
+--- 798,804 ----
+      if (fd > 2)
+  	close(fd);
+  
++ #ifndef __EMX__
+  #ifdef ultrix
+      if ((fd = open("/dev/tty", O_RDONLY)) >= 0) {
+  	ioctl(fd, TIOCNOTTY, 0);
+***************
+*** 651,656 ****
+--- 832,838 ----
+  
+      privileges(IGNORE);
+  
++ #endif	/* __EMX__ */
+      return fd;
+  }
+  /*}}} */
+***************
+*** 744,749 ****
+--- 926,950 ----
+  get_ttymode(ttymode_t * tio)
+  {
+  #ifdef HAVE_TERMIOS_H
++ #ifdef __EMX__
++ 	if (ptioctl(0, TCGETA, (char*)tio) < 0) {
++ 		/* default */
++ 		tio->c_iflag = ICRNL|IXON;
++ 		tio->c_oflag = OPOST|ONLCR|TAB3;
++ 	    	tio->c_cflag = B9600|CS8|CREAD|PARENB|HUPCL;
++ 	    	tio->c_lflag = ISIG|ICANON|ECHO|ECHOE|ECHOK;
++ 		tio->c_line = 0;
++ 		tio->c_cc[VINTR] = 'C' & 0x3f;		/* '^C'	*/
++ 		tio->c_cc[VERASE] = 0x7f;		/* DEL	*/
++ 		tio->c_cc[VKILL] = 'U' & 0x3f;		/* '^U'	*/
++ 		tio->c_cc[VQUIT] = CQUIT;		/* '^\'	*/
++ 	    	tio->c_cc[VEOF] = CEOF;		/* '^D'	*/
++ 		tio->c_cc[VEOL] = CEOL;		/* '^@'	*/
++ 	}
++ 	tio->c_iflag = ICRNL|IXON;
++ 	tio->c_oflag = OPOST|ONLCR;
++ 	tio->c_lflag = ISIG|ICANON|ECHO|ECHOE|ECHOK;
++ #else
+  /*
+   * standard System V termios interface
+   */
+***************
+*** 809,814 ****
+--- 1010,1016 ----
+  		    | ECHOCTL | ECHOKE
+  #endif
+  	);
++ #endif	/* __EMX__ */
+  
+  /*
+   * guess an appropriate value for Backspace
+***************
+*** 886,891 ****
+--- 1088,1097 ----
+  {
+      ttymode_t       tio;
+      int             ptyfd;
++ #ifdef __EMX__
++     char sema[40];
++     HEV sev;
++ #endif
+  
+  /* Save and then give up any super-user privileges */
+      privileges(SAVE);
+***************
+*** 934,939 ****
+--- 1140,1146 ----
+      debug_ttymode(&tio);
+  #endif
+  
++ #ifndef __EMX__
+  /* spin off the command interpreter */
+      signal(SIGHUP, Exit_signal);
+  #ifndef __svr4__
+***************
+*** 942,947 ****
+--- 1149,1164 ----
+      signal(SIGQUIT, Exit_signal);
+      signal(SIGTERM, Exit_signal);
+      signal(SIGCHLD, Child_signal);
++ #else
++     /* start a child process
++      * use an event sema for sync 
++      */
++     sprintf(sema,"\\SEM32\\rxvt%s",&ptydev[8]);
++     if (DosCreateEventSem(sema,&sev,DC_SEM_SHARED,FALSE)) {
++ 	print_error("DosCreateEventSem() error\n");
++ 	return -1;
++     }
++ #endif	/* __EMX__ */
+  
+  /* need to trap SIGURG for SVR4 (Unixware) rlogin */
+  /* signal (SIGURG, SIG_DFL); */
+***************
+*** 952,957 ****
+--- 1169,1181 ----
+  	return -1;
+      }
+      if (cmd_pid == 0) {		/* child */
++ #ifdef __EMX__
++ 	signal(SIGHUP, SIG_IGN);
++ 	signal(SIGINT, SIG_DFL);
++ 	signal(SIGQUIT, SIG_DFL);
++ 	signal(SIGTERM, SIG_DFL);
++ 	signal(SIGCHLD, SIG_DFL);
++ #endif
+      /* signal (SIGHUP, Exit_signal); */
+      /* signal (SIGINT, Exit_signal); */
+  #ifdef HAVE_UNSETENV
+***************
+*** 960,965 ****
+--- 1184,1195 ----
+  	unsetenv("COLUMNS");
+      /* avoid passing termcap since terminfo should be okay */
+  	unsetenv("TERMCAP");
++ #else
++     /* avoid passing old settings and confusing term size */
++ 	unsetenv("LINES=");
++ 	unsetenv("COLUMNS=");
++     /* avoid passing termcap since terminfo should be okay */
++ 	unsetenv("TERMCAP=");
+  #endif				/* HAVE_UNSETENV */
+      /* establish a controlling teletype for the new session */
+  	get_tty();
+***************
+*** 972,978 ****
+--- 1202,1212 ----
+  #ifdef TIOCCONS
+  	    unsigned int    on = 1;
+  
++ #ifndef __EMX__
+  	    ioctl(0, TIOCCONS, &on);
++ #else
++ 	    ptioctl(0, TIOCCONS, &on);
++ #endif
+  #elif defined (SRIOCSREDIR)
+  	    int             fd = open(CONSOLE, O_WRONLY);
+  
+***************
+*** 985,990 ****
+--- 1219,1232 ----
+  	tt_winsize(0);		/* set window size */
+  
+      /* reset signals and spin off the command interpreter */
++ #ifdef __EMX__
++ 	signal(SIGHUP, SIG_DFL);
++ 	/* okay everything seems right, so tell the parent, we are going */
++ 	sprintf(sema,"\\SEM32\\rxvt%s",&ttydev[8]);
++ 	DosOpenEventSem(sema,&sev);
++ 	DosPostEventSem(sev);
++ 	DosCloseEventSem(sev);
++ #endif
+  	signal(SIGINT, SIG_DFL);
+  	signal(SIGQUIT, SIG_DFL);
+  	signal(SIGCHLD, SIG_DFL);
+***************
+*** 1011,1020 ****
+--- 1253,1270 ----
+  	} else {
+  	    const char     *argv0, *shell;
+  
++ #ifndef __EMX__
+  	    if ((shell = getenv("SHELL")) == NULL || *shell == '\0')
++ #else
++ 	    if ((shell = getenv("X11SHELL")) == NULL)
++ 		if ((shell = getenv("SHELL")) == NULL)
++ 			shell = getenv("OS2_SHELL");
++ 	    if (shell == NULL)
++ #endif	/* __EMX__ */
+  		shell = "/bin/sh";
+  
+  	    argv0 = my_basename(shell);
++ #ifndef __EMX__
+  	    if (Options & Opt_loginShell) {
+  		char           *p = MALLOC((strlen(argv0) + 2) * sizeof(char));
+  
+***************
+*** 1022,1032 ****
+--- 1272,1294 ----
+  		strcpy(&p[1], argv0);
+  		argv0 = p;
+  	    }
++ #endif
+  	    execlp(shell, argv0, NULL);
+  	    print_error("can't execute \"%s\"", shell);
+  	}
++ #ifdef __EMX__
++ 	sleep(5);
++ 	kill (-getppid(),SIGTERM);
++ #endif
+  	exit(EXIT_FAILURE);
+      }
++ #ifdef __EMX__
++     signal(SIGHUP, SIG_IGN);
++     signal(SIGINT, Exit_signal);
++     signal(SIGQUIT, Exit_signal);
++     signal(SIGTERM, Exit_signal);
++     signal(SIGCHLD, Child_signal);
++ #endif
+  #ifdef UTMP_SUPPORT
+      privileges(RESTORE);
+      if (!(Options & Opt_utmpInhibit))
+***************
+*** 1062,1071 ****
+--- 1324,1337 ----
+  
+  /* get number of available file descriptors */
+  #ifdef _POSIX_VERSION
++ #ifndef __EMX__
+      num_fds = sysconf(_SC_OPEN_MAX);
+  #else
+      num_fds = getdtablesize();
+  #endif
++ #else
++     num_fds = getdtablesize();
++ #endif
+  
+  #ifdef META8_OPTION
+      meta_char = (Options & Opt_meta8 ? 0x80 : 033);
+***************
+*** 1239,1245 ****
+--- 1505,1515 ----
+      ws.ws_col = (unsigned short)TermWin.ncol;
+      ws.ws_row = (unsigned short)TermWin.nrow;
+      ws.ws_xpixel = ws.ws_ypixel = 0;
++ #ifndef __EMX__
+      ioctl(fd, TIOCSWINSZ, &ws);
++ #else
++     ptioctl(fd, TIOCSWINSZ, &ws);
++ #endif
+  }
+  
+  /* PROTO */
+***************
+*** 1833,1839 ****
+--- 2103,2113 ----
+      static short    refreshed = 0;
+      fd_set          readfds;
+      int             retval;
++ #ifndef __EMX__
+      struct itimerval value;
++ #else
++     struct timeval value;
++ #endif
+  
+  /* If there have been a lot of new lines, then update the screen
+   * What the heck I'll cheat and only refresh less than every page-full.
+***************
+*** 1886,1900 ****
+--- 2160,2183 ----
+  	FD_ZERO(&readfds);
+  	FD_SET(cmd_fd, &readfds);
+  	FD_SET(Xfd, &readfds);
++ #ifndef __EMX__
+  	value.it_value.tv_usec = TIMEOUT_USEC;
+  	value.it_value.tv_sec = 0;
++ #else
++ 	value.tv_usec = TIMEOUT_USEC;
++ 	value.tv_sec = 0;
++ #endif
+  
+  	retval = select(num_fds, &readfds, NULL, NULL,
+  			((refreshed
+  #ifdef SCROLLBAR_BUTTON_CONTINUAL_SCROLLING
+  			  && !(scrollbar_isUpDn())
+  #endif
++ #ifndef __EMX__
+  			 ) ? NULL : &value.it_value));
++ #else
++ 			 ) ? NULL : &value));
++ #endif
+  
+      /* See if we can read from the application */
+  	if (FD_ISSET(cmd_fd, &readfds)) {
+***************
+*** 2026,2032 ****
+--- 2309,2322 ----
+  
+      case ClientMessage:
+  	if (ev->xclient.format == 32 && ev->xclient.data.l[0] == wmDeleteWindow)
++ #ifndef __EMX__
+  	    exit(EXIT_SUCCESS);
++ #else
++ 	{
++ 	    kill (-cmd_pid, SIGHUP);
++ 	    return;
++ 	}
++ #endif
+  #ifdef OFFIX_DND
+      /* OffiX Dnd (drag 'n' drop) protocol */
+  	if (ev->xclient.message_type == DndProtocol &&
+diff -c -r -N rxvt-2.4.5.orig/src/Imakefile rxvt-2.4.5/src/Imakefile
+*** rxvt-2.4.5.orig/src/Imakefile	Thu Jan  1 00:00:00 1970
+--- rxvt-2.4.5/src/Imakefile	Sat May 16 15:26:50 1998
+***************
+*** 0 ****
+--- 1,29 ----
++ XPMLIB = -lXpm -lSM -lICE -lX11
++ DEPLIBS = $(DEPXLIB) 
++ 
++ LOCAL_LIBRARIES = $(XPMLIB) $(XLIB)  
++ 
++ LINTLIBS = $(LINTXLIB)
++ 
++ INCLUDES = -I./..
++ 
++ SRCS =  command.c graphics.c grkelot.c main.c menubar.c misc.c \
++         netdisp.c rmemset.c screen.c scrollbar.c utmp.c xdefaults.c
++ 
++ OBJS =  command.o graphics.o grkelot.o main.o menubar.o misc.o \
++         netdisp.o rmemset.o screen.o scrollbar.o utmp.o xdefaults.o
++ 
++ PROTS = command.pro graphics.pro grkelot.pro main.pro menubar.pro misc.pro \
++         netdisp.pro rmemset.pro screen.pro scrollbar.pro utmp.pro xdefaults.pro
++ 
++ %.pro: %.c
++ 	sed -n -f makeprotos-sed $< > $@
++ 
++ all:: $(PROTS)
++ 
++ depend:: $(PROTS)
++ 
++ clean::
++ 	rm -f $(PROTS)
++ 
++ ComplexProgramTarget(rxvt)
+diff -c -r -N rxvt-2.4.5.orig/src/menubar.c rxvt-2.4.5/src/menubar.c
+*** rxvt-2.4.5.orig/src/menubar.c	Fri Jan  2 03:29:08 1998
+--- rxvt-2.4.5/src/menubar.c	Sat May 16 15:26:50 1998
+***************
+*** 2100,2111 ****
+--- 2100,2120 ----
+  		 * remove menu before sending keys to the application
+  		 */
+  		    {
++ #ifndef __EMX__
+  			struct itimerval tv;
+  
+  			tv.it_value.tv_sec = 0;
+  			tv.it_value.tv_usec = MENU_DELAY_USEC;
+  
+  			select(0, NULL, NULL, NULL, &tv.it_value);
++ #else
++ 			struct timeval tv;
++ 
++ 			tv.tv_sec = 0;
++ 			tv.tv_usec = MENU_DELAY_USEC;
++ 
++ 			select(0, NULL, NULL, NULL, &tv);
++ #endif
+  		    }
+  		    menu_hide_all();
+  #ifndef DEBUG_MENU
+***************
+*** 2184,2195 ****
+--- 2193,2213 ----
+  		 * use select for timing
+  		 */
+  		    {
++ #ifndef __EMX__
+  			struct itimerval tv;
+  
+  			tv.it_value.tv_sec = 0;
+  			tv.it_value.tv_usec = MENU_DELAY_USEC;
+  
+  			select(0, NULL, NULL, NULL, &tv.it_value);
++ #else
++ 			struct timeval tv;
++ 
++ 			tv.tv_sec = 0;
++ 			tv.tv_usec = MENU_DELAY_USEC;
++ 
++ 			select(0, NULL, NULL, NULL, &tv);
++ #endif
+  		    }
+  		    draw_Arrows(Arrows[i].name, +1);
+  #ifdef DEBUG_MENUARROWS
+diff -c -r -N rxvt-2.4.5.orig/src/misc.c rxvt-2.4.5/src/misc.c
+*** rxvt-2.4.5.orig/src/misc.c	Fri Jan  2 03:29:08 1998
+--- rxvt-2.4.5/src/misc.c	Sat May 16 15:28:16 1998
+***************
+*** 21,26 ****
+--- 21,30 ----
+  
+  #include "rxvt.h"		/* NECESSARY */
+  
++ #ifdef __EMX__
++ extern char *__XOS2RedirRoot(const char *);
++ #endif
++ 
+  /*----------------------------------------------------------------------*/
+  /* PROTO */
+  const char     *
+***************
+*** 28,33 ****
+--- 32,41 ----
+  {
+      const char     *base = strrchr(str, '/');
+  
++ #ifdef __EMX__
++     if (!base)
++ 	base = strrchr(str, '\\');
++ #endif
+      return (base ? base + 1 : str);
+  }
+  
+***************
+*** 250,259 ****
+--- 258,274 ----
+      static char     name[256];
+      int             maxpath, len;
+      char           *p;
++ #ifdef __EMX__
++     char           *t;
++ #endif
+      char           *path = (char *)pathlist;	/* remove const */
+  
+      if (!access(file, R_OK))
+  	return file;
++ #ifdef __EMX__
++     if (file[0] == '/' && (t = __XOS2RedirRoot(file)) && !access(t, R_OK))
++ 	return t;
++ #endif
+  
+  /* semi-colon delimited */
+      if ((p = strchr(file, ';')) == NULL)
+***************
+*** 277,292 ****
+--- 292,319 ----
+  
+      if (!access(name, R_OK))
+  	return name;
++ #ifdef __EMX__
++     if (name[0] == '/' && (t = __XOS2RedirRoot(name)) && !access(t, R_OK))
++ 	return t;
++ #endif
+      if (ext) {
+  	strcat(name, ext);
+  	if (!access(name, R_OK))
+  	    return name;
++ #ifdef __EMX__
++ 	if (name[0] == '/' && (t = __XOS2RedirRoot(name)) && !access(t, R_OK))
++ 	    return t;
++ #endif
+      }
+      for ( /*nil */ ; path != NULL && *path != '\0'; path = p) {
+  	int             n;
+  
+      /* colon delimited */
++ #ifndef __EMX__
+  	if ((p = strchr(path, ':')) == NULL)
++ #else
++ 	if ((p = strchr(path, ';')) == NULL)
++ #endif
+  	    p = strchr(path, '\0');
+  
+  	n = (p - path);
+***************
+*** 302,311 ****
+--- 329,346 ----
+  
+  	    if (!access(name, R_OK))
+  		return name;
++ #ifdef __EMX__
++ 	    if (name[0] == '/' && (t = __XOS2RedirRoot(name)) && !access(t, R_OK))
++ 		return t;
++ #endif
+  	    if (ext) {
+  		strcat(name, ext);
+  		if (!access(name, R_OK))
+  		    return name;
++ #ifdef __EMX__
++ 		if (name[0] == '/' && (t = __XOS2RedirRoot(name)) && !access(t, R_OK))
++ 		    return t;
++ #endif
+  	    }
+  	}
+      }
+***************
+*** 432,435 ****
+--- 467,490 ----
+  #endif
+      }
+  }
++ 
++ #ifndef HAVE_UNSETENV
++ void
++ unsetenv (var)
++ register char *var;
++ {
++ 	register char **p = environ;
++ 	register size_t len = strlen(var);
++ 
++ 	while (*p != NULL) {
++ 	    if (strncmp (*p, var, len) == 0)
++ 		break;
++ 	    p ++;
++ 	}
++ 	while (*p != NULL) {
++ 	    *p = *(p+1);
++ 	    p++;
++ 	}
++ }
++ #endif
+  /*----------------------- end-of-file (C source) -----------------------*/
+diff -c -r -N rxvt-2.4.5.orig/src/rxvt.h rxvt-2.4.5/src/rxvt.h
+*** rxvt-2.4.5.orig/src/rxvt.h	Fri Jan  2 03:29:08 1998
+--- rxvt-2.4.5/src/rxvt.h	Sat May 16 15:26:50 1998
+***************
+*** 300,305 ****
+--- 300,311 ----
+  
+  
+  /* ways to deal with getting/setting termios structure */
++ #ifdef __EMX__
++ typedef struct termio ttymode_t;
++ #define GET_TERMIOS(fd,tios)	ptioctl (fd, TCGETA, tios)
++ #define SET_TERMIOS(fd,tios)	ptioctl (fd, TCSETA, tios)
++ #define SET_TTYMODE(fd,tios)	SET_TERMIOS (fd, tios)
++ #else
+  #ifdef HAVE_TERMIOS_H
+  typedef struct termios ttymode_t;
+  
+***************
+*** 341,346 ****
+--- 347,353 ----
+  	ioctl (fd, TIOCSETD, &(tt->line)),		\
+  	ioctl (fd, TIOCLSET, &(tt->local))
+  #endif				/* HAVE_TERMIOS_H */
++ #endif	/* __EMX__ */
+  
+  typedef unsigned char text_t;
+  typedef unsigned int rend_t;

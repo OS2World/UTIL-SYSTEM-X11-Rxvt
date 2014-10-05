@@ -1,0 +1,13 @@
+- Improve Dokumentation...
+
+- Rewrite the event-queue handling from scratch
+
+- Rewrite the selection_clear() routine.  It's too time and memory
+  consuming!
+
+- Overstriking should be improved. Avoid pixel droppings.
+  Check, if oversrike works with Kanji
+
+- Need font-check for kanji fonts.
+
+- Add Unicode support
